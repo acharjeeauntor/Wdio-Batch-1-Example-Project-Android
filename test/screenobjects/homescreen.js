@@ -9,6 +9,7 @@ class HomeScreen {
         await $(this.appListItemSelector).click();
     }
     async clickOnTheSearchText() {
+        await $(this.searchListItemSelector).waitForDisplayed()
         await $(this.searchListItemSelector).click();
     }
     async clickOnTheInvokeText() {
@@ -17,7 +18,12 @@ class HomeScreen {
     }
     async enterSearchItem(text) {
         const selector = `android=${this.searchBoxSelector}`;
-        await $(selector).setValue(text);
+        await $(selector).addValue(text);
+        var gettext = await $(selector).getText()
+        console.log(`The TEXT is: ${gettext}`)
+
+        // var myValue = await $(selector).getValue()
+        // console.log(`My VALUE is: ${myValue}`)
     }
 
 }
