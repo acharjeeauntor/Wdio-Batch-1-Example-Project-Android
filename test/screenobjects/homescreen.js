@@ -10,6 +10,7 @@ class HomeScreen {
     }
     async clickOnTheSearchText() {
         await $(this.searchListItemSelector).waitForDisplayed()
+        // await $(this.searchListItemSelector).waitForDisplayed({timeout: 30000,timeoutMsg:"The search item taking more then default timeout"})
         await $(this.searchListItemSelector).click();
     }
     async clickOnTheInvokeText() {

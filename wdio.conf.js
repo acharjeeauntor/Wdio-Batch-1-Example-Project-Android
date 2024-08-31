@@ -3,7 +3,7 @@ exports.config = {
     runner: 'local',
     port: 4723,
     specs: [
-        "./test/specs/test.e2e.js",
+        "./test/specs/test.e2e.js"
     ],
     //
     // ============
